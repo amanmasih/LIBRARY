@@ -158,7 +158,7 @@ class MainWin(Tk):
                     #label and input box
                     self.label3 = Label(self, text='SHEPHERD LIBRARY MANAGEMENT SYSTEM',fg='black',bg="white" ,font=('AlGERIAN', 30, 'bold'))
                     self.label3.place(x=147, y=22)
-                    self.label4 = Label(self, text="ENTER STUDENT/ADMIN ID", font=('Arial', 18, 'bold'))
+                    self.label4 = Label(self, text="ENTER STUDENT", font=('Arial', 18, 'bold'))
                     self.label4.place(x=50, y=107)
                     self.e1 = Entry(self, textvariable=self.a, width=90).place(x=405, y=110)
                     self.srt = Button(self, text='Search', width=15, font=('arial', 10),command = ser).place(x=1000, y=106)
