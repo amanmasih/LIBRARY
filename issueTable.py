@@ -62,7 +62,7 @@ class issue(Tk):
                                 elif fine[0] > 0:
                                     Confirm = messagebox.askyesno('Confirm','Are you sure you want to issue.There is a fine')
                                     if Confirm:
-                                        self.mycursor.execute("INSERT INTO issue VALUES (?,?,date('now'),date('now','+15 days'))",[c.get(), d.get()])
+                                        self.mycursor.execute("INSERT INTO issue VALUES (?,?,date('now'),date('now','+03 days'))",[c.get(), d.get()])
                                         self.mycursor.execute("UPDATE books set Availiability=0 where Book_Id = ?",[c.get()])
                                         issue[0] = issue[0] + 1
                                         self.mycursor.execute("Update students set Books_Issued = ? where Student_Id = ?",[issue[0], d.get()])
