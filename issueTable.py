@@ -44,7 +44,7 @@ class issue(Tk):
                                     messagebox.showerror('Oops', 'Cannot Issue.Please Pay the Fine')
                                 elif fine[0] == 0:
                                     print("done")
-                                    self.mycursor.execute("INSERT INTO issue VALUES (?,?,date('now'),date('now','+15 days'))",[c.get(), d.get()])
+                                    self.mycursor.execute("INSERT INTO issue VALUES (?,?,date('now'),date('now','+03 days'))",[c.get(), d.get()])
                                     self.mycursor.execute("UPDATE books set Availiability=0 where Book_Id = ?",[c.get()])
                                     issue[0] = issue[0] + 1
                                     print("done2")
