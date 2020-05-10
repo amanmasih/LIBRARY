@@ -79,7 +79,10 @@ class Add(Tk):
         def fileDialog():
             filename = filedialog.askopenfilename(initialdir = "/",title = "Select A File",filetype = (("jpeg","*.jpg"),("png","*.png"),("All Files","*.*")))
             e.set(filename)
+        label8 = Label(self, text="Upload image", font=('Comic Scan Ms', 10, 'bold')).place(x=70, y=330)
+        upload_image = Entry(self, textvariable=e, width=30).place(x=200, y=330)
         ZS_phone_number = Entry(self, textvariable=d, width=30).place(x=200, y=282)
-        S_butt = Button(self, text="Submit",width = 15,command=asi).place(x=230, y=350)
+        butt = Button(self, text="Browse", width=7, command=fileDialog).place(x=400, y=328)
+        S_butt = Button(self, text="Submit",width = 15,command=asi).place(x=230, y=370)
 
 Add().mainloop()
